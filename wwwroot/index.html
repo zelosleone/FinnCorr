@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Upload CSV Files</h1>
+    <form id="uploadForm" enctype="multipart/form-data" onsubmit="return validateForm()">
+        <label for="file1">File 1:</label>
+        <input type="file" id="file1" name="file1" required><br><br>
+        <label for="file2">File 2:</label>
+        <input type="file" id="file2" name="file2" required><br><br>
+        
+        <h2>Define File 1 Structure</h2>
+        <div id="file1Fields">
+            <!-- Dynamic field inputs for File 1 -->
+        </div>
+        <button type="button" onclick="addField('file1')">Add Field</button>
+
+        <h2>Define File 2 Structure</h2>
+        <div id="file2Fields">
+            <!-- Dynamic field inputs for File 2 -->
+        </div>
+        <button type="button" onclick="addField('file2')">Add Field</button>
+
+        <br><br>
+        <button type="submit">Upload</button>
+    </form>
+    <div id="results">
+        <!-- Graphs and insights will be displayed here -->
+    </div>
+    <script src="app.js"></script>
+    <script>
+        function validateForm() {
+            const file1Fields = document.getElementById('file1Fields').children.length;
+            const file2Fields = document.getElementById('file2Fields').children.length;
+            if (file1Fields === 0 || file2Fields === 0) {
+                alert('Please define at least one field for each file.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

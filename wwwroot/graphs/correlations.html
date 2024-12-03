@@ -1,0 +1,13 @@
+
+                <html>
+                <head>
+                    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+                </head>
+                <body>
+                    <div id='chart'></div>
+                    <script>
+                        var graphData = {"data":[{"x":["Pair1-Pair2"],"y":[0],"name":"Positive Correlation","type":"bar","marker":{"color":"green"}},{"x":["Pair1-Pair2"],"y":[0.46132496],"name":"Negative Correlation","type":"bar","marker":{"color":"red"}}],"layout":{"title":"Correlation Percentage","barmode":"group","xaxis":{"title":"Fields"},"yaxis":{"title":"Correlation Percentage (%)"}}};
+                        Plotly.newPlot('chart', graphData.data, graphData.layout);
+                    </script>
+                </body>
+                </html>

@@ -1,4 +1,4 @@
-# Financial Data Correlation Analysis Engine
+# FinnCorr - Financial Data Correlation Analysis Engine
 
 ## Overview
 A REST API and web-based analysis tool for financial time series correlation analysis, featuring automated data processing and visualization capabilities.
